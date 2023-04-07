@@ -1,11 +1,14 @@
 msgid I don't know how to parse `{endtime_str}`, please try again.
 msgstr Neviem ako prečítať `{endtime_str}`, prosím skús to znova.
 
-msgid Emoji {emoji} was used more than once!
-msgstr Emoji {emoji} bolo použité viac ako raz!
+msgid Option `{option}` is in incorrect format.
+msgstr Možnosť `{option}` je v zlom formáte.
 
-msgid Emoji {emoji} was not recognized as emoji!
-msgstr Emoji {emoji} nebolo rozpoznané ako emoji!
+msgid Emoji {emoji_str} was used more than once!
+msgstr Emoji {emoji_str} bolo použité viac ako raz!
+
+msgid Emoji {emoji_str} was not recognized as emoji!
+msgstr Emoji {emoji_str} nebolo rozpoznané ako emoji!
 
 msgid Vote started!
 msgstr Hlasovanie začalo!

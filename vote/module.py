@@ -83,21 +83,29 @@ class Vote(commands.Cog):
         options = {}
 
         for line in options_str.splitlines():
-            (emoji, description) = line.split(maxsplit=1)
-            if self.check_emoji(emoji):
-                if emoji in emojis:
+            try:
+                (emoji_str, description) = line.split(maxsplit=1)
+            except ValueError:
+                await ctx.reply(
+                    _(ctx, "Option `{option}` is in incorrect format.").format(
+                        option=line
+                    )
+                )
+                return
+            if self.check_emoji(emoji_str):
+                if emoji_str in emojis:
                     await ctx.reply(
-                        _(ctx, "Emoji {emoji} was used more than once!").format(
-                            emoji=emoji
+                        _(ctx, "Emoji {emoji_str} was used more than once!").format(
+                            emoji_str=emoji_str
                         )
                     )
                     return
-                emojis.append(emoji)
-                options[emoji] = description
+                emojis.append(emoji_str)
+                options[emoji_str] = description
             else:
                 await ctx.reply(
-                    _(ctx, "Emoji {emoji} was not recognized as emoji!").format(
-                        emoji=emoji
+                    _(ctx, "Emoji {emoji_str} was not recognized as emoji!").format(
+                        emoji_str=emoji_str
                     )
                 )
                 return
