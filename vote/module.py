@@ -79,7 +79,6 @@ class Vote(commands.Cog):
             )
             return
 
-        emojis = []
         options = {}
 
         for line in options_str.splitlines():
@@ -93,14 +92,13 @@ class Vote(commands.Cog):
                 )
                 return
             if self.check_emoji(emoji_str):
-                if emoji_str in emojis:
+                if emoji_str in options.keys():
                     await ctx.reply(
                         _(ctx, "Emoji {emoji_str} was used more than once!").format(
                             emoji_str=emoji_str
                         )
                     )
                     return
-                emojis.append(emoji_str)
                 options[emoji_str] = description
             else:
                 await ctx.reply(
