@@ -1,0 +1,23 @@
+msgid I don't know how to parse `{endtime_str}`, please try again.
+msgstr Nevím jak přečíst `{endtime_str}`, zkus to znovu.
+
+msgid Emoji {emoji} was used more than once!
+msgstr Emoji {emoji} bylo použito více než jednou!
+
+msgid Emoji {emoji} was not recognized as emoji!
+msgstr Emoji {emoji} nebylo rozpoznané jako emoji!
+
+msgid Vote started!
+msgstr Hlasování začalo!
+
+msgid **End time:** {end_time}
+msgstr **Čas ukončení:** {end_time}
+
+msgid **Options:**
+msgstr **Možnosti:**
+
+msgid Vote ended!
+msgstr Hlasování skončilo!
+
+msgid **Results:**
+msgstr **Výsledky:**
